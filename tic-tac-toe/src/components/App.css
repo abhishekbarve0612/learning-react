@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.cross {
+  color: chocolate;
+  text-align: center;
+}
+
+.zero {
+  color: darkgray;
+  text-align: center;
+}

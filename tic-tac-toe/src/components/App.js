@@ -26,14 +26,20 @@ class App extends Component{
       gameOver: false,
       gameState: ["", "", "", "", "", "", "", "", ""] 
     }
-    
+  }
+  componentDidUpdate(prevProps, prevState){
+    console.log(prevProps + " --- " + prevState);
   }
   changePlayer = () => {
     if (this.state.currentPlayer === "X"){
-      this.state.currentPlayer = "O";
+      this.setState({
+        currentPlayer: "O"
+      })
     } 
     else {
-      this.state.currentPlayer = "X";
+      this.setState({
+        currentPlayer: "X"
+      })
     }
   }
 
@@ -42,9 +48,9 @@ class App extends Component{
     if (this.state.gameOver === false){
         const newState = [...this.state.gameState];
         newState[e.target.id] = this.state.currentPlayer;
-        this.setState({
-          gameState: newState
-        });
+        this.setState((state) => ({
+          gameState: [...newState]
+        }));
         console.log(newState);
         console.log(this.state.gameState);
         this.checkResult();

@@ -21,12 +21,15 @@
   color: cornflowerblue;
   font-size: x-large;
   justify-content: left;
+  flex-grow: 4;
 }
 
 .post-author {
   color: cadetblue;
   font-size: large;
   justify-content: right;
+  text-align: right;
+  flex-grow: 1;
 }
 
 .post-body {
@@ -42,4 +45,14 @@
   padding: 10px;
   border: none;
   color: white;
+}
+
+/**Detail Post**/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  justify-content: center;
+  align-items: center;
 }
